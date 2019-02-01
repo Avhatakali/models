@@ -1,0 +1,28 @@
+<h3>Vehicle list</h3>
+
+<%= link_to 'new', new_vehicle_path %>
+
+<table>
+    <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+    </tr>
+
+  <% @vehicles.each do |vehicle| %>
+        <tr>
+           <td><%= vehicle.make %></td>
+           <td><%= vehicle.model %></td>
+           <td><%= vehicle.year %></td>
+           <td><%= link_to 'show', vehicle_path(vehicle) %></td>
+           <td><%= link_to 'edit', edit_vehicle_path(vehicle) %></td>
+           <td><%= link_to 'delete', vehicle_path(vehicle),
+                    method: :delete,
+                    data: {confirm: 'Are yuh sure ?'}
+              %></td>
+        </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Cities', cities_path %> <br>
+<%= link_to 'index', users_path %> <br>

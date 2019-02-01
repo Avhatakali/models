@@ -1,0 +1,15 @@
+<h3>entered company's details</h3>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Industry</th>
+  </tr>
+
+   <tr>
+        <td><%= @company.name %> </td>
+        <td><%= @company.industry %></td>
+   </tr>
+
+</table>
+
+<%= link_to 'index', companies_path %>

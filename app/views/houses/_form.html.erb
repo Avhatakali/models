@@ -1,0 +1,20 @@
+<%= form_with(model: @house, local: true) do |form|%>
+    <p>
+        <%= form.label :city%> <br>
+        <%= form.text_field :city %>
+    </p>
+
+    <p>
+        <%= form.label :'number of rooms'%> <br>
+        <%= form.text_field :number_of_rooms %>
+    </p>
+
+    <p>
+        <%= form.label :'has garage'%> <br>
+        <%= form.text_field :has_garage %>
+    </p>
+
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>

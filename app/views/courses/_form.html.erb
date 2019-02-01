@@ -1,0 +1,21 @@
+<%= form_with(model: @course, local: true) do |form| %>
+    <p>
+        <%= form.label :Name %> <br>
+        <%= form.text_field :name %>
+    </p>
+
+    <p>
+        <%= form.label :Subject %> <br>
+        <%= form.text_field :subject %>
+    </p>
+
+    <p>
+        <%= form.label :Professor %> <br>
+        <%= form.text_field :professor %>
+    </p>
+
+    <p>
+        <%= form.submit %>
+    </p>
+
+<% end %>

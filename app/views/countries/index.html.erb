@@ -1,0 +1,25 @@
+<h4>Country list</h4>
+
+<%= link_to 'new', new_country_path %>
+
+<table>
+    <tr>
+      <th>Name</th>
+      <th>part of Africa</th>
+    </tr>
+
+    <%@countries.each do |country|%>
+        <tr>
+            <td><%= country.name %></td>
+            <td><%= country.part_of_africa %></td>
+            <td><%= link_to 'Show', country_path(country) %></td>
+            <td><%= link_to 'Edit',edit_country_path(country) %></td>
+            <td><%= link_to 'Delete', country_path(country),
+              method: :delete,
+              data: {confirm: 'really, yuh want to delete ?'}%></td>
+        </tr>
+    <% end %>
+</table>
+
+<%= link_to 'Houses', houses_path %> <br>
+<%= link_to 'index', users_path %> <br>

@@ -1,0 +1,28 @@
+<h4>Clothing list</h4>
+
+<%= link_to 'new', new_clothe_path%>
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Piece</th>
+    </tr>
+
+    <% @clothes.each do |clothe|%>
+       <tr>
+           <td><%= clothe.id %></td>
+           <td><%= clothe.name %></td>
+           <td><%= clothe.piece %></td>
+           <td><%= link_to 'Show', clothe_path(clothe) %></td>
+           <td><%= link_to 'edit', edit_clothe_path(clothe) %></td>
+           <td><%= link_to 'Delete', clothe_path(clothe),
+             method: :delete,
+             data: {confirm: 'Are yuh sure ?'}
+             %></td>
+       </tr>
+    <% end %>
+</table>
+
+<%= link_to 'Courses', courses_path %> <br>
+<%= link_to 'index', users_path %> <br>

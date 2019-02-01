@@ -1,0 +1,46 @@
+<h1>users list</h1>
+
+<%= link_to 'new_user', new_user_path %> <br>
+
+<table>
+      <tr>
+         <th>Name</th>
+         <th>Surname</th>
+      </tr>
+
+    <%  @users.each do |user| %>
+      <tr>
+          <td><%= user.id%></td>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= link_to 'Show', user_path(user) %></td>
+          <td><%= link_to 'Edit', edit_user_path(user) %></td>
+          <td><%= link_to 'Delete', user_path(user),
+            method: :delete,
+            data: {confirm: 'Are yuh sure ?'}%></td>
+      </tr>
+   <% end %>
+
+</table>
+
+
+<table>
+  <tr>
+    <td><%= link_to 'Occupations', occupations_path %> <br></td>
+    <td><%= link_to 'Books', books_path %> <br></td>
+    <td><%= link_to 'Companies', companies_path %> <br></td>
+  </tr>
+
+  <tr>
+    <td><%= link_to 'Vehicles', vehicles_path %> <br></td>
+    <td><%= link_to 'Cities', cities_path %> <br></td>
+    <td><%= link_to 'Countries', countries_path %> <br></td>
+  </tr>
+
+  <tr>
+    <td><%= link_to 'Houses', houses_path %> <br></td>
+    <td><%= link_to 'clothes', clothes_path %> <br></td>
+    <td><%= link_to 'Courses', courses_path %> <br></td>
+  </tr>
+
+</table>

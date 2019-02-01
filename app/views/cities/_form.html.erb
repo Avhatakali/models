@@ -1,0 +1,15 @@
+<%= form_with(model: @city, loacal: true) do |form| %>
+    <p>
+          <%= form.label :Name %> <br>
+          <%= form.text_field :name %>
+    </p>
+
+    <p>
+          <%= form.label :Country %> <br>
+          <%= form.text_field :country %>
+    </p>
+
+    <p>
+        <%= form.submit%>
+    </p>
+<% end %>

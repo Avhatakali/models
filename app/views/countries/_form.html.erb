@@ -1,0 +1,17 @@
+<%= form_with(model: @country, local: true) do |form|%>
+
+   <p>
+        <%= form.label :'Country Name' %> <br>
+        <%= form.text_field :name%>
+   </p>
+
+   <p>
+        <%= form.label :'part of Africa'%> <br>
+        <%= form.text_field :part_of_africa%>
+   </p
+
+   <p>
+        <%= form.submit %>
+   </p>
+
+<% end %>

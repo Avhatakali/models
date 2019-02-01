@@ -1,0 +1,22 @@
+<%= form_with(model: @vehicle, lacal: true) do |form| %>
+
+    <p>
+        <%= form.label :Make %> <br>
+        <%= form.text_field :make %>
+    </p>
+
+    <p>
+        <%= form.label :Model %> <br>
+        <%= form.text_field :model %>
+    </p>
+
+    <p>
+        <%= form.label :Year %> <br>
+        <%= form.text_field :year %>
+    </p>
+
+   <p>
+          <%= form.submit %>
+   </p>
+
+<% end %>
